@@ -76,5 +76,13 @@
 
 #weatherDescription {
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline;
+}
+
+#temperature {
+  font-size: 50px;
+  font-weight: bold;
+  display: inline;
 }
