@@ -1,11 +1,35 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let currentDate = date.getDate();
-  let month = date.getMonth();
-  let day = date.getDay();
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Sunday",
+  ];
+  let day = days[date.getDay()];
   let year = date.getFullYear();
+  let todaysDate = date.getDate();
 
-  return `${day}, ${date} ${month}. ${year}`;
+  return `${day}, ${todaysDate} ${month}, ${year}`;
 }
 
 function displayTemperature(response) {
@@ -21,7 +45,7 @@ function displayTemperature(response) {
   feelsLike.innerHTML = `Feels like ${Math.round(
     response.data.main.feels_like
   )}°C`;
-  dateElement.innerHTML = formatDate(response);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 let apiKey = "653b806439282a7bd7eba7fc4fe797a3";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=auckland&units=metric&appid=${apiKey}`;
