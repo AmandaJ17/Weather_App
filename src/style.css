@@ -1,0 +1,16 @@
+.row input[type="text"] {
+  background: white;
+  border-radius: 8px;
+  border: white;
+  opacity: 0.5;
+  margin: 30px 3px 15px 3px;
+  padding: 15px 160px 15px 20px;
+}
+.row button {
+  background: white;
+  border-radius: 8px;
+  border: white;
+  margin: 30px 3px 10px 3px;
+  padding: 15px 20px 15px 20px;
+  text-emphasis-color: black;
+}
