@@ -13,8 +13,7 @@ function displayTemperature(response) {
   let cityName = document.querySelector("#city");
   let description = document.querySelector("#weatherDescription");
   let feelsLike = document.querySelector("#feelsLike");
-  let temperatureRange = document.querySelector("#temperatureRange");
-  let dateElement = document.querySelector("#date");
+  let dateElement = document.querySelector("#currentDate");
 
   temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°C`;
   cityName.innerHTML = response.data.name;
@@ -22,9 +21,6 @@ function displayTemperature(response) {
   feelsLike.innerHTML = `Feels like ${Math.round(
     response.data.main.feels_like
   )}°C`;
-  temperatureRange.innerHTML = `${Math.round(
-    response.data.main.temp_min
-  )}°C / ${Math.round(response.data.main.temp_max)}°C`;
   dateElement.innerHTML = formatDate(response);
 }
 let apiKey = "653b806439282a7bd7eba7fc4fe797a3";
