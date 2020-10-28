@@ -1,15 +1,15 @@
 .row input[type="text"] {
-  background: white;
+  background: lightgray;
   border-radius: 8px;
-  border: white;
+  border: 1px solid lightgray;
   opacity: 0.5;
   margin: 30px 3px 15px 3px;
   padding: 15px 160px 15px 20px;
 }
 .row button {
-  background: white;
+  background: lightgray;
   border-radius: 8px;
-  border: white;
+  border: 1px solid lightgray;
   margin: 30px 3px 10px 3px;
   padding: 15px 20px 15px 20px;
   text-emphasis-color: black;
@@ -61,5 +61,9 @@
   max-width: 100%;
 }
 #nextDay6Icon {
+  max-width: 100%;
+}
+
+#currentWeatherIcon {
   max-width: 100%;
 }
