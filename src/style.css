@@ -14,3 +14,9 @@
   padding: 15px 20px 15px 20px;
   text-emphasis-color: black;
 }
+
+.currentWeather {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
