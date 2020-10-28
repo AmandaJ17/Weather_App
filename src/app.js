@@ -1,9 +1,20 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let currentDate = date.getDate();
+  let month = date.getMonth();
+  let day = date.getDay();
+  let year = date.getFullYear();
+
+  return `${day}, ${date} ${month}. ${year}`;
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityName = document.querySelector("#city");
   let description = document.querySelector("#weatherDescription");
   let feelsLike = document.querySelector("#feelsLike");
   let temperatureRange = document.querySelector("#temperatureRange");
+  let dateElement = document.querySelector("#date");
 
   temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°C`;
   cityName.innerHTML = response.data.name;
@@ -14,6 +25,7 @@ function displayTemperature(response) {
   temperatureRange.innerHTML = `${Math.round(
     response.data.main.temp_min
   )}°C / ${Math.round(response.data.main.temp_max)}°C`;
+  dateElement.innerHTML = formatDate(response);
 }
 let apiKey = "653b806439282a7bd7eba7fc4fe797a3";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=auckland&units=metric&appid=${apiKey}`;
