@@ -33,11 +33,13 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityName = document.querySelector("#city");
   let description = document.querySelector("#weatherDescription");
   let feelsLike = document.querySelector("#feelsLike");
   let dateElement = document.querySelector("#currentDate");
+  let iconElement = document.querySelector("#currentWeatherIcon");
 
   temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°C`;
   cityName.innerHTML = response.data.name;
@@ -46,6 +48,11 @@ function displayTemperature(response) {
     response.data.main.feels_like
   )}°C`;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 let apiKey = "653b806439282a7bd7eba7fc4fe797a3";
 let city = "Auckland";
