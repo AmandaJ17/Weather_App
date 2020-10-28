@@ -73,3 +73,8 @@
   font-family: Arial, Helvetica, sans-serif;
   color: lightgray;
 }
+
+#weatherDescription {
+  text-transform: capitalize;
+  font-size: 18px;
+}
