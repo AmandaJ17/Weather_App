@@ -67,6 +67,9 @@
 #currentWeatherIcon {
   max-width: 100%;
 }
-.small {
+
+#forecast {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: lightgray;
 }
