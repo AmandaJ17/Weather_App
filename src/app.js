@@ -41,7 +41,7 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#currentDate");
   let iconElement = document.querySelector("#currentWeatherIcon");
 
-  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°c`;
   cityName.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   feelsLike.innerHTML = `Feels like ${Math.round(
