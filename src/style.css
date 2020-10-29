@@ -1,45 +1,65 @@
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .row input[type="search"] {
-  background: lightgray;
+  background: white;
   border-radius: 8px;
   border: 1px solid lightgray;
   opacity: 0.5;
-  margin: 30px 3px 15px 3px;
-  padding: 15px 160px 15px 20px;
+  margin: 30px 3px 15px 20px;
+  padding: 15px 300px 15px 20px;
 }
 .row button {
-  background: lightgray;
+  background: white;
   border-radius: 8px;
   border: 1px solid lightgray;
   margin: 30px 3px 10px 3px;
   padding: 15px 20px 15px 20px;
-  text-emphasis-color: black;
+  color: rgba(206, 173, 166, 1);
+}
+
+.container {
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 0px 0px 30px 0px;
+  background: rgb(206, 173, 166);
+  background: linear-gradient(
+    0deg,
+    rgba(206, 173, 166, 1) 0%,
+    rgba(151, 135, 164, 1) 55%,
+    rgba(63, 101, 164, 1) 97%
+  );
 }
 
 .currentWeather {
   border: 2px solid lightgray;
   border-radius: 10px;
-  padding: 15px 20px;
-  margin: 0px 0px 30px 0px;
+  padding: 30px;
+  margin: 0px 20px 30px 20px;
+  background: white;
+  box-shadow: 8px 8px gray;
 }
+
 .currentWeather h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 70px;
+  font-size: 100px;
   font-weight: bold;
-  color: lightgray;
+  color: rgba(206, 173, 166, 1);
+  line-height: 50px;
+  margin: 10px 0px 10px 0px;
 }
 
 .currentWeather p {
-  font-family: Arial, Helvetica, sans-serif;
-  color: lightgray;
+  color: rgba(206, 173, 166, 1);
   font-size: 12px;
 }
 #currentDate {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 #forecastNames {
-  font-family: Arial, Helvetica, sans-serif;
   color: lightgray;
   font-size: 15px;
   font-weight: bold;
@@ -70,7 +90,6 @@
 
 #forecast {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
   color: lightgray;
 }
 
@@ -78,11 +97,17 @@
   text-transform: capitalize;
   font-size: 20px;
   font-weight: bold;
-  display: inline;
 }
 
 #temperature {
-  font-size: 100px;
+  font-size: 60px;
   font-weight: bold;
   display: inline;
+  text-align: center;
+}
+#feelsLike {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline;
+  text-align: center;
 }
