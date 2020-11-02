@@ -95,3 +95,9 @@
 #theForecast {
   margin: 0px 20px 40px 20px;
 }
+
+ul {
+  list-style: none;
+  font-size: 15px;
+  color: rgba(206, 173, 166, 1);
+}

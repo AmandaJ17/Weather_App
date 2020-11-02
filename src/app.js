@@ -40,10 +40,14 @@ function displayTemperature(response) {
   let feelsLike = document.querySelector("#feelsLike");
   let dateElement = document.querySelector("#currentDate");
   let iconElement = document.querySelector("#currentWeatherIcon");
+  let precipitation = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
 
   temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°c`;
   cityName.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  precipitation.innerHTML = response.data.main.humidity;
   feelsLike.innerHTML = `Feels like ${Math.round(
     response.data.main.feels_like
   )}°C`;
