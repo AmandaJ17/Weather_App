@@ -65,28 +65,6 @@
   font-weight: bold;
   text-align: center;
 }
-#nextDayIcon {
-  max-width: 100%;
-}
-#nextDay2Icon {
-  max-width: 100%;
-}
-#nextDay3Icon {
-  max-width: 100%;
-}
-#nextDay4Icon {
-  max-width: 100%;
-}
-#nextDay5Icon {
-  max-width: 100%;
-}
-#nextDay6Icon {
-  max-width: 100%;
-}
-
-#currentWeatherIcon {
-  max-width: 100%;
-}
 
 #forecast {
   text-align: center;
@@ -110,4 +88,10 @@
   font-weight: bold;
   display: inline;
   text-align: center;
+}
+.small {
+  margin: 10px;
+}
+#theForecast {
+  margin: 0px 20px 40px 20px;
 }
